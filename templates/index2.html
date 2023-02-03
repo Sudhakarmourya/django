@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <h1>{{bdata}}</h1>
+        {% for n in clist %}
+        <div>
+            {{n}}
+        </div>
+        {% endfor %}
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+            </tr>
+            {% for d in student_list %}
+            <tr>
+                <td>{{d.name}}</td>
+                <td>{{d.phone}}</td>
+            </tr>
+
+            {% endfor %}
+        </table>
+        {% if number|length > 0 %}
+        {% for n in number %}
+            {% if n > 20 %}
+                     <div>{{n}}</div>
+            {% endif %}
+        {% endfor %}
+        {% else %}
+         No Record Found
+         {% endif %}
+    </body>
+</html>
