@@ -13,7 +13,7 @@ def home(request):
     }
     return render(request,'index.html',data)
 def aboutUs(request):
-    return HttpResponse('welcome to Techsima  Solution Private limited')
+    return render(request,'about.html')
 def course(request):
     return HttpResponse('Welcome to our courses page')
 def courseDetails(request,courseid):
