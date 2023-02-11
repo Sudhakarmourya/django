@@ -47,13 +47,13 @@
                 <h4 class="footer-widget-title">About</h4>
                 <div class="footer-widget-content">
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="service.html">Services</a></li>
-                        <li><a href="faqs.html">Faqs</a></li>
-                        <li><a href="terms-condition.html">Terms and Condition</a></li>
-                        <li><a href="site-map.html">Site Map</a></li>
-                        <li><a href="privacy-policy.html">Privacy and Policy</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'blog' %}">Blog</a></li>
+                        <li><a href="{% url 'services' %}">Services</a></li>
+                        <li><a href="{% url 'faq' %}">Faqs</a></li>
+                        <li><a href="{% url 'term' %}">Terms and Condition</a></li>
+                        <li><a href="{% url 'site' %}">Site Map</a></li>
+                        <li><a href="{% url 'privacy' %}">Privacy and Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -156,7 +156,7 @@
 </form>
 </div>
 
-<div id="myModal" class="modal Query-form">
+{% comment %} <div id="myModal" class="modal Query-form">
 <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
@@ -179,7 +179,7 @@
         </div>
     </div>
 </div>
-</div>
+</div> {% endcomment %}
 
 
 <script src="/static/js/vendor/vendor.min.js"></script>

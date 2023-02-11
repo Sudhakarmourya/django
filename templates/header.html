@@ -1,5 +1,6 @@
-{% load static %}
+
 <!DOCTYPE html>
+{% load static %}
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
@@ -88,22 +89,22 @@
                         <nav class="site-main-menu">
                             <ul>
                                 <li>
-                                    <a href="home.html"><span class="menu-text">Home</span></a>
+                                    <a href="{% url 'home' %}"><span class="menu-text">Home</span></a>
                                 </li>
                                 <li>
-                                    <a href="about.html"><span class="menu-text">About Us</span></a>
+                                    <a href="{% url 'about' %}"><span class="menu-text">About Us</span></a>
                                 </li>
                                 <li>
-                                    <a href="blog.html"><span class="menu-text">Blog</span></a>
+                                    <a href="{% url 'blog' %}"><span class="menu-text">Blog</span></a>
                                 </li>
                                 <li>
-                                    <a href="service.html"><span class="menu-text">Services</span></a>
+                                    <a href="{% url 'services' %}"><span class="menu-text">Services</span></a>
                                 </li>
                                 <li>
-                                    <a href="faqs.html"><span class="menu-text"> Faqs</span></a>
+                                    <a href="{% url 'faq' %}"><span class="menu-text"> Faqs</span></a>
                                 </li>
                                 <li>
-                                    <a href="contact.html"><span class="menu-text">Contact Us</span></a>
+                                    <a href="{% url 'contact' %}"><span class="menu-text">Contact Us</span></a>
                                 </li>
                             </ul>
                         </nav>
@@ -125,13 +126,7 @@
 </div>
 <!-- Header Main Menu End -->
 
-<!-- Header Right Start -->
-                        <!-- <div class="col-xl-2 col d-none d-sm-flex justify-content-end order-1 order-xl-2">
-                            <a href="contact.html" class="btn btn-light btn-hover-primary">Contact us</a>
-                        </div> -->
-                        <!-- Header Right End -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
+ </div>
+</div>
+</div>
+</div>

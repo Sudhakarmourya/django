@@ -1,7 +1,9 @@
-{% include "header.html" %}
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
 
         <!-- Page Title Section Start -->
-        <div class="page-title-section section section-padding-top" data-overlay="0.7" data-bg-image={% static  "images/bg/breadcrumb-bg.jpg" %} alt="breadcrumb-image">
+        <div class="page-title-section section section-padding-top" data-overlay="0.7" data-bg-image="/static/images/bg/breadcrumb-bg.jpg' %}" alt="breadcrumb-image">
             <div class="page-title">
                 <div class="container heading">
                     <!--<h2 class="title">We are an agency located in Lucknow</h2>-->
@@ -32,7 +34,7 @@
                 <div class="col-xl-7 col-lg-6 col-12" data-aos="fade-up">
                     <div class="about-image-area about-image-section">
                         <div class="about-image js-tilt">
-                            <img src={% static  "images/about/about-3.jpg" %} alt="About-section-image">
+                            <img src="{%static  'images/about/about-3.jpg' %}" alt="About-section-image">
                         </div>
                         <div class="about-image js-tilt">
                             <img src={% static  "images/about/about-4.jpg" %} alt="About-section-image">
@@ -185,7 +187,7 @@
             <div class="col-lg-4 col-md-12 mt-4 pt-2">
                 <div class="team text-center">
                     <div class="position-relative">
-                        <img src={% static  "images/about/team-3.jpeg" %} class="img-fluid d-block rounded-pill mx-auto" alt="Team-Image">
+                        <img src="{% static  'images/about/team-3.jpeg' %}" class="img-fluid d-block rounded-pill mx-auto" alt="Team-Image">
 
                     </div>
                     <div class="content pt-3 pb-3">
@@ -341,4 +343,4 @@
 </div>
 
 
-{% include "footer.html" %}
+{% endblock %}

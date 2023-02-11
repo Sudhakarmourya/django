@@ -20,7 +20,15 @@ from myproject import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
-    path('about/', views.aboutUs, name="aboutUs"),
-    path('course/', views.course, name="course"),
-     path('course/', views.course, name="course"),
+    path('about/', views.about, name="about"),
+    path('blog/', views.blog, name="blog"),
+    path('contact/',views.contact, name="contact"),
+    path('faq/',views.faq, name="faq"),
+    path('services/',views.services, name="services"),
+    path('privacy/',views.privacy, name="privacy"),
+    path('site/',views.site, name="site"),
+    path('term/',views.term, name="term"),
+    path('error/',views.error, name="error"),
+    # path('course/', views.course, name="course"),
+    #  path('course/', views.course, name="course"),
 ]
