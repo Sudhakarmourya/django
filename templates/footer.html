@@ -1,3 +1,4 @@
+{% load static %}
 <div class="footer-section section" data-bg-color="#030e22" style="background-color: rgb(3, 14, 34);">
     <div class="container">
 
@@ -102,7 +103,7 @@
     <div class="mobile-menu-header">
         <div class="mobile-menu-logo">
             <a href="home.html">
-                <img src="/static/images/logo/logo.png" alt="Agency Logo">
+                <img src="{% static 'images/logo/logo.png' %}" alt="Agency Logo">
             </a>
         </div>
         <div class="mobile-menu-close">
@@ -119,22 +120,22 @@
             <nav class="site-mobile-menu">
                 <ul>
                     <li>
-                        <a href="home.html"><span class="menu-text">Home</span></a>
+                        <a href="{% url 'home' %}"><span class="menu-text">Home</span></a>
                     </li>
                     <li>
-                        <a href="about.html"><span class="menu-text">About Us</span></a>
+                        <a href="{% url 'about' %}"><span class="menu-text">About Us</span></a>
                     </li>
                     <li>
-                        <a href="blog.html"><span class="menu-text">Blog</span></a>
+                        <a href="{% url 'blog' %}"><span class="menu-text">Blog</span></a>
                     </li>
                     <li>
-                        <a href="service.html"><span class="menu-text">Services</span></a>
+                        <a href="{% url 'services' %}"><span class="menu-text">Services</span></a>
                     </li>
                     <li>
-                        <a href="faqs.html"><span class="menu-text">Faqs</span></a>
+                        <a href="{% url 'faq' %}"><span class="menu-text">Faqs</span></a>
                     </li>
                     <li class="site-mobile-menu-bottom">
-                        <a href="contact.html"><span class="menu-text">Contact Us</span></a>
+                        <a href="{% url 'contact' %}"><span class="menu-text">Contact Us</span></a>
                     </li>
 
                 </ul>

@@ -6,7 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>About Us – Cradlefeed.co.in</title>
+    {% comment %} {% block title %}<title></title> {% endblock %} {% endcomment %}
+    <title>
+    {% block title %}
+      {% endblock %}
+    </title>
     <meta name="keywords" content="about us, Cradlefeed.co.in"/>
     <link rel="icon" href={% static "images/logo/favicon.png" %} type="image/png">
     <link rel="canonical" href="https://cradlefeed.co.in/about.html"/>
@@ -88,22 +92,23 @@
                     <div class="menu-column-area d-none d-xl-block position-static">
                         <nav class="site-main-menu">
                             <ul>
-                                <li>
+                                {% comment %} {{request.path}} {% endcomment %}
+                                <li class="{% if request.path == '/' %} active {% endif %}">
                                     <a href="{% url 'home' %}"><span class="menu-text">Home</span></a>
                                 </li>
-                                <li>
+                                <li class="{% if request.path == '/about/' %} active {% endif %}">
                                     <a href="{% url 'about' %}"><span class="menu-text">About Us</span></a>
                                 </li>
-                                <li>
+                                <li  class="{% if request.path == '/blog/' %} active {% endif %}">
                                     <a href="{% url 'blog' %}"><span class="menu-text">Blog</span></a>
                                 </li>
-                                <li>
+                                <li  class="{% if request.path == '/services/' %} active {% endif %}">
                                     <a href="{% url 'services' %}"><span class="menu-text">Services</span></a>
                                 </li>
-                                <li>
+                                <li  class="{% if request.path == '/faq/' %} active {% endif %}">
                                     <a href="{% url 'faq' %}"><span class="menu-text"> Faqs</span></a>
                                 </li>
-                                <li>
+                                <li  class="{% if request.path == '/contact/' %} active {% endif %}">
                                     <a href="{% url 'contact' %}"><span class="menu-text">Contact Us</span></a>
                                 </li>
                             </ul>

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="page-title-section section section-padding-top" data-overlay="0.7" data-bg-image="assets/images/bg/breadcrumb-bg.jpg" alt="breadcrumb-image">
+<div class="page-title-section section section-padding-top" data-overlay="0.7" data-bg-image="{% static 'images/bg/breadcrumb-bg.jpg' %}" alt="breadcrumb-image">
   <div class="page-title">
     <div class="container heading">
       <!--<h2 class="title">We are an agency located in Lucknow</h2>-->
@@ -75,7 +75,7 @@
 </div>
 <div class="col-lg-6">
   <div class="faq-image">
-    <img src="assets/images/faq/faq.jpg" alt="faq-image">
+    <img src="{% static 'images/faq/faq.jpg' %}" alt="faq-image">
   </div>
 </div>
 </div>
